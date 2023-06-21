@@ -1,0 +1,12 @@
+.nav-log-in-link,
+.nav-sign-up-link {
+  height: $na-header-height;
+
+  > a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 16px;
+  }
+}

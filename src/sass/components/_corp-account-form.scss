@@ -1,0 +1,148 @@
+.corp-account-form {
+  padding: 1rem 0 0;
+  font-size: 16px;
+
+  .corp-account-form-title {
+    display: flex;
+    justify-content: space-between;
+    .na-help-icon {
+      align-self: flex-start;
+    }
+  }
+  .corp-account-form-wrapper {
+    margin: 1.5rem 0;
+
+    .corp-account-form-element {
+      display: flex;
+      flex-wrap: wrap;
+
+      // Organization, Email Domains
+      .corp-account-form-group-1 {
+        flex: 1 100%;
+        display: flex;
+        flex-direction: column;
+        @include media-up(sm) {
+          flex: 1 66%;
+          padding-right: 3rem;
+        }
+        @include media-up(md) {
+          flex-direction: row;
+          padding-right: 0;
+        }
+        .corp-account-form-group-organization,
+        .corp-account-form-group-email {
+          @include media-up(sm) {
+            flex: 0 auto;
+          }
+          @include media-up(md) {
+            flex: 1 100%;
+            padding-right: 3rem;
+          }
+        }
+      }
+      // Logo Image
+      .corp-account-form-group-2 {
+        flex: 1 100%;
+        @include media-up(sm) {
+          flex: 1 33%;
+        }
+        .corp-account-form-group-logo {
+          .logo-file-upload {
+            margin-left: auto;
+          }
+        }
+      }
+      // Actions
+      .corp-account-form-group-3 {
+        flex: 1 100%;
+      }
+    }
+
+    .form-set {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    .form-set-wrap {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .image-container {
+      position: relative;
+      background-color: #123456;
+      height: 20rem;
+
+      .image-placeholder {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+        color: $na-white;
+      }
+
+      .image-file-warning {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: $z-corp-account-form-file-warning;
+        opacity: 0.9;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        padding: 1rem;
+        background-color: $na-danger;
+        color: $na-white;
+      }
+
+      .image-logo {
+        background-color: #123456;
+        min-height: 20rem;
+        height: 20rem;
+        max-height: 20rem;
+        object-fit: contain;
+        width: 100%;
+      }
+      .remove-image-btn {
+        min-width: 0;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+      }
+      .image-metadata {
+        padding: 0.25rem;
+        background: black;
+        color: white;
+      }
+    }
+
+    .list-adder {
+      .list-adder-input {
+        .input-group {
+          display: flex;
+          width: 100%;
+        }
+      }
+    }
+    .list-adder-items {
+      display: grid;
+
+      .list-adder-item {
+        padding: 0 0 0 1rem;
+
+        .list-adder-item-at {
+          color: $na-grey;
+        }
+      }
+    }
+
+    .form-actions {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

@@ -1,0 +1,4 @@
+.department-participant {
+  @extend %list-item;
+  @extend %selectable;
+}

@@ -1,0 +1,67 @@
+stages:
+  - test
+  - build
+  - deploy
+
+test:
+  stage: test
+  image: node:8.10
+
+  before_script:
+    - yarn install
+
+  script:
+    - yarn test
+
+build:
+  stage: build
+  image: node:8.10
+
+  only:
+    - master
+    - staging
+    - develop
+
+  before_script:
+    - yarn install
+    - sed -i 's@\@COMMITHASH@'"$CI_COMMIT_SHA"'@g' **/*.template.html
+    - sed -i 's@\@BRANCH@'"$CI_COMMIT_REF_NAME"'@g' **/*.template.html
+  script:
+    - yarn build
+    - yarn build:debug
+
+  artifacts:
+    expire_in: 72 hrs
+    paths:
+      - dist
+
+deploy:
+  stage: deploy
+  image: coreapps/dind-aws
+
+  only:
+    - master
+    - staging
+    - develop
+
+  before_script:
+    - mkdir ~/.aws
+    - echo "[default]" >> ~/.aws/credentials
+    - echo "aws_access_key_id = $AWS_ACCESS_KEY" >> ~/.aws/credentials
+    - echo "aws_secret_access_key = $AWS_SECRET_KEY" >> ~/.aws/credentials
+    - echo "var c = {};" > version.js
+    - echo "c.prefix = 'c';" >> version.js
+    - echo "c.project = '$CI_PROJECT_NAME';" >> version.js
+    - echo "c.branch = '$CI_COMMIT_REF_NAME';" >> version.js
+    - echo "c.commit = '$CI_COMMIT_SHA';" >> version.js
+    - echo "c.pipeline = '$CI_PIPELINE_ID';" >> version.js
+    - echo "c.user = '$GITLAB_USER_LOGIN';" >> version.js
+    - echo "c.trigger = '$CI_PIPELINE_SOURCE';" >> version.js
+    - echo "c.buildtime = '$CI_COMMIT_TIMESTAMP';" >> version.js
+    - cat version.js
+    - mv version.js "$CI_PROJECT_NAME"_version.js    
+
+  script:
+    - mv dist $CI_COMMIT_REF_NAME
+    - aws s3 cp --recursive $CI_COMMIT_REF_NAME s3://releases.noteaffect.com/$CI_COMMIT_REF_NAME
+    - aws s3 cp "$CI_PROJECT_NAME"_version.js s3://releases.noteaffect.com/$CI_COMMIT_REF_NAME/js/

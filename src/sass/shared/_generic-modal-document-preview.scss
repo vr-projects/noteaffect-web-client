@@ -1,0 +1,108 @@
+$notes-container-dimension: 30rem;
+
+.signature-requests-backdrop.modal-backdrop,
+.my-documents-backdrop.modal-backdrop,
+.document-notes.modal-backdrop {
+  & + div.modal {
+    margin-top: 5rem;
+    border-top: 1px solid $na-white;
+    .modal-body {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      .generic-modal.document-preview {
+        flex: 1 1 100%;
+        .pdf-main {
+          flex-grow: 1;
+          padding: 16px;
+          overflow-y: auto;
+
+          .meta-data {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 16px;
+            border-bottom: 1px solid $na-hr-grey;
+            margin-bottom: 16px;
+            .document-name {
+              padding-right: 8px;
+              .value {
+                font-weight: bold;
+              }
+            }
+            .document-created {
+              padding-left: 8px;
+            }
+            .label {
+              display: flex;
+              padding: 8px 0;
+              font-size: 11px;
+              color: $na-beastly-grey;
+              white-space: nowrap;
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.document-notes-visible {
+    & + div.modal .modal-dialog {
+      width: inherit;
+      margin: 0;
+
+      .modal-content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        .modal-header,
+        .modal-footer {
+          flex-grow: 0;
+        }
+        .modal-body {
+          flex-grow: 1;
+
+          .document-preview {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @include media-up(xs) {
+              flex-direction: row;
+            }
+
+            .pdf-main {
+              flex: 1 1 auto;
+              overflow-y: auto;
+
+              @include media-up(xs) {
+                flex: 1 0 calc(100% - #{$notes-container-dimension});
+                width: calc(100% - #{$notes-container-dimension});
+              }
+            }
+
+            .pdf-notes-container {
+              flex: 0 1 $notes-container-dimension;
+              background-color: $na-hr-grey;
+              min-height: 33vh;
+              display: flex;
+              flex-direction: column;
+              .pdf-notes {
+                position: relative;
+                flex: 1 1 100%;
+                display: flex;
+                flex-direction: column;
+                margin: 8px;
+
+                .pdf-notes-error {
+                  margin-bottom: 0;
+                  flex: 1 1 auto;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.corp-meetings-zero,
+.my-documents-zero {
+  @extend .flex-grow-column-container;
+  justify-content: center;
+
+  .zero-grid {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-areas:
+      'message-btn'
+      'svg';
+
+    @include media-up(sm) {
+      grid-template-areas: 'message-btn svg';
+    }
+
+    .message-btn-container {
+      grid-area: message-btn;
+      justify-self: center;
+
+      @include media-up(sm) {
+        align-self: center;
+        justify-self: end;
+      }
+      .message {
+        margin-bottom: 2rem;
+      }
+      .add-btn {
+      }
+      .participant-message {
+        @include media-up(sm) {
+          width: 32rem;
+        }
+      }
+    }
+
+    .svg-image-container {
+      grid-area: svg;
+      max-width: 30rem;
+      justify-self: center;
+
+      @include media-up(sm) {
+        justify-self: start;
+      }
+
+      .svg-image {
+        width: 100%;
+        max-width: 30rem;
+      }
+    }
+  }
+}

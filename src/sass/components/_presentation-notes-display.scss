@@ -1,0 +1,27 @@
+.presentation-notes-display {
+  @extend .flex-grow-column-container;
+  &.notes-container {
+    overflow-x: none;
+    overflow-y: auto;
+
+    textarea.notes {
+      flex-grow: 1;
+      margin: 0;
+      border: none;
+      background-color: $na-white;
+      padding: 8px;
+      font-size: 16px;
+
+      &:focus {
+        outline: none;
+        border: 1px inset solid $na-primary-100;
+      }
+    }
+
+    &.disabled {
+      textarea.notes {
+        background-color: transparent;
+      }
+    }
+  }
+}

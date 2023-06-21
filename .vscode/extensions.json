@@ -1,0 +1,20 @@
+{
+  "recommendations": [
+    // Project-specific
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "aaron-bond.better-comments",
+    "coenraads.bracket-pair-colorizer",
+    "streetsidesoftware.code-spell-checker",
+    "kamikillerto.vscode-colorize",
+    "johnpapa.vscode-peacock",
+    "visualstudioexptteam.vscodeintellicode",
+
+    // Optional
+    "therealmarv.vscode-theme-dark-atom-dark-green-cursor",
+    "perubin-ch-0507.coder-dark-theme-visual-studio-code",
+    "mikestead.dotenv",
+    "eamodio.gitlens",
+    "giflens.giflens"
+  ]
+}

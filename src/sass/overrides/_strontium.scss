@@ -1,0 +1,23 @@
+#add-series-po {
+  max-width: 400px;
+  width: 400px;
+}
+
+.popover {
+  max-width: 400px;
+  width: 400px;
+}
+
+.popover-content > div > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sr-app-overlay {
+  @include multitype-transition(background-color);
+  &.visible {
+    background-color: rgba(221, 221, 221, 0.5);
+    position: fixed;
+    z-index: $z-sr-app-overlay;
+  }
+}

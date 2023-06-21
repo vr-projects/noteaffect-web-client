@@ -1,0 +1,13 @@
+.course-overview {
+  .content-container {
+    .metadata-container {
+      min-width: 100%;
+      width: 100%;
+
+      @include media-up(md) {
+        min-width: calc(100% / 1.5);
+        width: calc(100% / 1.5);
+      }
+    }
+  }
+}

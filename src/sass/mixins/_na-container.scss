@@ -1,0 +1,10 @@
+@mixin na-container {
+  background: $na-white;
+  border: 1px solid $na-hr-grey;
+  border-radius: 4px;
+  padding: 16px 24px;
+}
+@mixin na-container-lifted {
+  @include na-container;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.09);
+}

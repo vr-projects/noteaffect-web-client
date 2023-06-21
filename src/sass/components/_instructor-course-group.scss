@@ -1,0 +1,176 @@
+.instructor-course-group {
+  &.isCorp {
+    .instructor-course-group-grid {
+      background-color: $na-light-grey;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-auto-rows: 1fr;
+      grid-gap: 1rem;
+      margin-bottom: 2rem;
+      .course-item,
+      .instructor-course-item {
+        @include na-container-lifted;
+
+        &.upcoming {
+          border-left: 8px solid $na-secondary;
+        }
+        &.past {
+          border-left: 8px solid $na-primary-light;
+        }
+        &.expired {
+          border-left: 8px solid $na-heather-grey;
+          @include isExpired;
+        }
+        .course-data {
+          display: grid;
+          align-items: center;
+          grid-template-areas: 'primary secondary context';
+          grid-template-columns: 1fr 1fr 32px;
+
+          @include media-down(sm) {
+            grid-template-columns: 1fr 32px;
+            grid-template-rows: auto auto;
+            grid-template-areas:
+              'primary context'
+              'secondary secondary';
+          }
+        }
+        .data-group {
+          align-self: center;
+          &.primary {
+            grid-area: primary;
+            @include media-down(sm) {
+              margin-bottom: 16px;
+            }
+          }
+
+          &.secondary {
+            grid-area: secondary;
+            font-size: 13px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            &.secondary-instructor {
+              grid-template-columns: 1fr 1fr;
+              grid-template-areas:
+                'grid-item-times grid-item-permissions'
+                'grid-item-expires grid-item-violations'
+                'grid-item-meetingId grid-item-questions'
+                'grid-item-presenters grid-item-presenter';
+              @include media-up(md) {
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-areas:
+                  'grid-item-times grid-item-permissions grid-item-meetingId'
+                  'grid-item-expires grid-item-violations grid-item-questions'
+                  'grid-item-presenters grid-item-presenters grid-item-presenters';
+              }
+            }
+            &.secondary-student {
+              grid-template-columns: 1fr 1fr;
+              grid-template-areas:
+                'grid-item-times grid-item-permissions'
+                'grid-item-expires grid-item-meetingId'
+                'grid-item-presenters grid-item-sharedby';
+              @include media-up(md) {
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-areas:
+                  'grid-item-times grid-item-permissions grid-item-meetingId'
+                  'grid-item-expires grid-item-presenters grid-item-sharedby';
+              }
+            }
+
+            & > div {
+              margin: 8px 16px 0 0;
+              display: flex;
+              align-items: center;
+            }
+            .grid-item-times {
+              grid-area: grid-item-times;
+            }
+            .grid-item-presenters {
+              grid-area: grid-item-presenters;
+            }
+            .grid-item-expires {
+              grid-area: grid-item-expires;
+            }
+            .grid-item-permissions {
+              grid-area: grid-item-permissions;
+            }
+            .grid-item-meetingId {
+              grid-area: grid-item-meetingId;
+            }
+            // Instructor only
+            .grid-item-violation {
+              grid-area: grid-item-violation;
+            }
+            // Instructor only
+            .grid-item-questions {
+              grid-area: grid-item-questions;
+            }
+            // Student only
+            .grid-item-sharedby {
+              grid-area: grid-item-sharedby;
+            }
+          }
+          &.context {
+            grid-area: context;
+          }
+        }
+        .title {
+          font-size: 18px;
+          font-weight: bold;
+          color: $na-link-blue;
+        }
+        .dates {
+          grid-area: grid-item-dates;
+          font-size: 16px;
+        }
+        .icon {
+          margin-right: 8px;
+          color: #8e9dab;
+          font-size: 16px;
+        }
+        .sharedBy {
+          .icon {
+            color: $na-secondary;
+          }
+        }
+        .data-context-menu {
+          width: 32px;
+          height: 30px;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-color: $na-alto-grey;
+
+          &.btn {
+            min-width: initial;
+            border-radius: 4px;
+          }
+          .icon {
+            margin-right: 0;
+            font-size: 18px;
+            margin-bottom: 2px;
+          }
+        }
+      }
+    }
+  }
+  &.upcoming-container {
+    .instructor-course-item {
+      border-left: 8px solid $na-secondary !important;
+    }
+  }
+  &.past-container {
+    .instructor-course-item {
+      border-left: 8px solid $na-primary-light !important;
+    }
+  }
+  &.expired-container {
+    .instructor-course-item {
+      border-left: 8px solid #b7c1cc !important;
+    }
+  }
+}

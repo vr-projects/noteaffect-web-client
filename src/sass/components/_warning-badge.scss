@@ -1,0 +1,34 @@
+.warning-badge {
+  background-color: $na-primary-100;
+
+  .icon.icon.icon.icon.icon {
+    color: $na-secondary-100;
+  }
+  &.bottom-right.bottom-right.bottom-right.bottom-right {
+    position: absolute;
+    bottom: 0;
+    left: unset;
+    right: 0;
+  }
+  &.bottom-left.bottom-left.bottom-left.bottom-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: unset;
+  }
+  &.small.small.small {
+    .icon.icon.icon {
+      font-size: 8px;
+    }
+  }
+  &.medium.medium.medium {
+    .icon.icon.icon {
+      font-size: 12px;
+    }
+  }
+  &.large.large.large {
+    .icon.icon.icon {
+      font-size: 18px;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.series-presentations-lectures-layout {
+  margin-bottom: 1rem;
+  .presentations-lectures {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+
+    .presentation-lecture {
+      @include na-container-lifted;
+      background-color: $na-white;
+      border: 1px solid $na-light-grey;
+      border-radius: 4px;
+      padding: 12px 24px;
+
+      &:hover,
+      &:focus {
+        cursor: pointer;
+      }
+
+      &-title,
+      &-subtitle {
+        margin: 0;
+      }
+
+      &-title {
+        font-size: 18px;
+        font-weight: 700;
+        color: $na-link-blue;
+      }
+      &-subtitle {
+        font-size: 16px;
+      }
+    }
+  }
+}

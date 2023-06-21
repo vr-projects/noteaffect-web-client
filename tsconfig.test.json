@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "module": "es6",
+    "target": "es6",
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "lib": [ "dom", "es2015.promise", "es6" ],
+    "jsx": "react",
+    "sourceMap": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

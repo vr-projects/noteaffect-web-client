@@ -1,0 +1,207 @@
+.app-header {
+  padding: 0;
+  background-color: $na-primary;
+  border-radius: 0;
+  z-index: $z-app-header;
+  border: none;
+
+  > .container {
+    width: 100%;
+  }
+  &.has-logo {
+    > .container {
+      @include media-up(sm) {
+        padding-left: 0;
+      }
+    }
+  }
+  .open > .btn-info.dropdown-toggle {
+    background-color: inherit;
+  }
+  .navbar-header {
+    .client-logo {
+      height: $na-header-height;
+      width: auto;
+      object-fit: contain;
+      display: inline-block;
+      margin-right: 16px;
+
+      @include media-up(md) {
+        display: block;
+      }
+    }
+    .navbar-brand {
+      width: 130px;
+    }
+    .navbar-toggle {
+      background-color: $na-primary-500;
+      border: none;
+      &:hover,
+      &:focus {
+        background-color: $na-primary-700;
+      }
+      &:active {
+        background-color: $na-primary-300;
+      }
+
+      .icon-bar {
+        background-color: $na-white;
+      }
+    }
+  }
+
+  svg {
+    opacity: 0.5;
+    font-size: 1.25rem;
+  }
+  .nav:after,
+  .nav:before {
+    display: unset;
+  }
+}
+
+// fix for consistent header, remove immediate a-tag padding
+.navbar-header + .navbar-collapse > .navbar-nav > li > a {
+  padding: 0;
+}
+
+.navbar-main-btn.navbar-main-btn {
+  height: $na-header-height;
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+}
+
+.dropdown-menu {
+  margin-top: 0;
+  background-color: $na-primary;
+  color: $na-white;
+
+  > li > a {
+    color: $na-white;
+    opacity: 0.8;
+
+    &:focus,
+    &:hover {
+      background-color: rgba($na-white, 0.05);
+      color: $na-white;
+      opacity: 1;
+    }
+  }
+  > .active > a {
+    background-color: inherit;
+    border-left: 4px solid $na-secondary;
+    opacity: 1;
+
+    &:hover,
+    &:focus {
+      cursor: default;
+      background-color: $na-primary;
+    }
+  }
+  .na-menu-item {
+    li > button {
+      width: 100%;
+      text-align: left;
+    }
+    li > a {
+      color: $na-white;
+      background-color: $na-primary;
+
+      &:focus,
+      &:hover {
+        outline: none;
+        background-color: $na-primary-700;
+      }
+
+      &.active {
+        background-color: $na-secondary;
+      }
+      > span {
+        color: $na-white;
+      }
+    }
+  }
+}
+
+// Collapsed styles
+.navbar-header + .navbar-collapse.collapse.in {
+  > .nav.navbar-nav > .dropdown.btn-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  > .nav.navbar-nav > .dropdown.btn-group + li > a > button {
+    width: 100%;
+  }
+}
+
+.app-header {
+  #nav-instructor-menu,
+  #nav-admin-menu,
+  #nav-user-menu,
+  #nav-participant-menu,
+  #nav-documents-menu {
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    opacity: 0.8;
+
+    svg {
+      margin-left: 4px;
+      opacity: 0.8;
+    }
+    &.active {
+      background-color: inherit;
+      opacity: 1;
+
+      @include media-up(sm) {
+        &::after {
+          content: '';
+          display: block;
+          height: 4px;
+          background-color: $na-secondary;
+          border-radius: 4px;
+          margin-bottom: -15px;
+          margin-top: 11px;
+        }
+      }
+    }
+    &:hover,
+    &:focus {
+      background-color: rgba($na-white, 0.05);
+      opacity: 1;
+    }
+  }
+  .open {
+    & > #nav-instructor-menu,
+    & > #nav-admin-menu,
+    & > #nav-user-menu,
+    & > #nav-participant-menu,
+    & > #nav-documents-menu {
+      svg {
+        transition: transform 150ms ease-in-out;
+        transform: rotate(-180deg);
+      }
+    }
+    @include media-down(sm) {
+      .dropdown-menu {
+        text-align: center;
+        color: $na-white;
+        opacity: 0.8;
+
+        a {
+          display: inline-block;
+          opacity: 1;
+          background-color: none;
+        }
+        & > .active > a {
+          background-color: inherit;
+        }
+      }
+    }
+  }
+}

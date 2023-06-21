@@ -1,0 +1,19 @@
+.lecture-stop-button {
+  color: #900;
+  font-weight: bold;
+  padding: 5px 15px;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #fff1f1;
+  margin-right: 15px;
+
+  &:hover {
+    text-decoration: none;
+    color: #a00;
+  }
+
+  svg {
+    color: #b00;
+  }
+}

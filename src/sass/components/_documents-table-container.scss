@@ -1,0 +1,64 @@
+.documents-table-container {
+  @include na-container-lifted;
+
+  table {
+    thead {
+      tr {
+        th {
+          border-top: 0;
+          padding: 16px 16px 16px 0;
+          vertical-align: middle;
+          font-size: 11px;
+          color: $na-beastly-grey;
+          text-transform: uppercase;
+          font-weight: 400;
+          border-bottom: 2px solid $na-hr-grey;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          padding: 16px 16px 16px 0;
+          vertical-align: middle;
+          font-size: 13px;
+
+          &.document-name {
+            font-size: 15px;
+            font-weight: 700;
+            a {
+              color: $na-link-blue;
+            }
+          }
+
+          &.context-menu-container {
+            padding-right: 0;
+            text-align: right;
+
+            .data-context-menu {
+              width: 32px;
+              height: 30px;
+              margin: 0;
+              padding: 0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-color: $na-hr-grey;
+
+              &.btn {
+                min-width: initial;
+                border-radius: 4px;
+              }
+              .icon {
+                margin-right: 0;
+                font-size: 18px;
+                margin-bottom: 2px;
+                color: $na-regent-grey;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

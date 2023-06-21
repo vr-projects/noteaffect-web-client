@@ -1,0 +1,71 @@
+{
+    "courses": [{
+        "name": "72018 - BUS 230 - Contract Law",
+        "instructor": "Scarborough, L.",
+        "state": 4,
+        "id": 714,
+        "currentPresentation": null,
+        "courseStart": 1515772800,
+        "courseEnd": 1526137200,
+        "availableUntil": null,
+        "presentations": [{
+            "id": 219,
+            "started": 1522681200,
+            "ended": null
+        }]
+    }, {
+        "name": "71038 - ACCT 211 - Managerial Accounting",
+        "instructor": "Delaney, M.",
+        "state": 3,
+        "id": 712,
+        "currentPresentation": 219,
+        "courseStart": 1515772800,
+        "courseEnd": 1526137200,
+        "availableUntil": null,
+        "presentations": [{
+            "id": 219,
+            "started": 1522681200,
+            "ended": null
+        }]
+    }, {
+        "name": "67129 - BIO 120 - Introduction to Biology",
+        "state": 5,
+        "id": 512,
+        "instructor": "Gambino, N.",
+        "currentPresentation": null,
+        "courseStart": 1503759600,
+        "courseEnd": 1513353600,
+        "availableUntil": null,
+        "presentations": []
+    }, {
+        "name": "67129 - CS 201 - Fundamentals of Algorithms (C#)",
+        "state": 6,
+        "id": 513,
+        "instructor": "Liv, A.",
+        "currentPresentation": null,
+        "courseStart": 1503759600,
+        "courseEnd": 1513353600,
+        "availableUntil": null,
+        "presentations": []
+    }, {
+        "name": "81298 - ARCH 240 - Architectural History",
+        "state": 1,
+        "id": 518,
+        "instructor": "Ennis, L.",
+        "currentPresentation": null,
+        "courseStart": 1535295600,
+        "courseEnd": 1544889600,
+        "availableUntil": null,
+        "presentations": []
+    }, {
+        "name": "81298 - MKT 260 - Marketing",
+        "state": 2,
+        "id": 519,
+        "instructor": "Howard, P.",
+        "currentPresentation": null,
+        "courseStart": 1535295600,
+        "courseEnd": 1544889600,
+        "availableUntil": null,
+        "presentations": []
+    }]
+}

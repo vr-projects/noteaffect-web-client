@@ -1,0 +1,148 @@
+// TWBS4-style classes for margins and padding
+// repeating class names to increase specificity instead of !important
+$count: 4;
+@for $i from 0 through $count {
+  .mr-auto.mr-auto {
+    margin-right: auto;
+  }
+  .ml-auto.ml-auto {
+    margin-left: auto;
+  }
+  .m-#{ floor($i) }.m-#{ floor($i) } {
+    margin: $i * 1rem;
+  }
+  .mr-#{ floor($i) }.mr-#{ floor($i) } {
+    margin-right: $i * 1rem;
+  }
+  .ml-#{ floor($i) }.ml-#{ floor($i) } {
+    margin-left: $i * 1rem;
+  }
+  .mt-#{ floor($i) }.mt-#{ floor($i) } {
+    margin-top: $i * 1rem;
+  }
+  .mb-#{ floor($i) }.mb-#{ floor($i) } {
+    margin-bottom: $i * 1rem;
+  }
+  .mx-#{ floor($i) }.mx-#{ floor($i) } {
+    margin-left: $i * 1rem;
+    margin-right: $i * 1rem;
+  }
+  .my-#{ floor($i) }.my-#{ floor($i) } {
+    margin-top: $i * 1rem;
+    margin-bottom: $i * 1rem;
+  }
+  .p-#{ floor($i) }.p-#{ floor($i) } {
+    padding: $i * 1rem;
+  }
+  .pr-#{ floor($i) }.pr-#{ floor($i) } {
+    padding-right: $i * 1rem;
+  }
+  .pl-#{ floor($i) }.pl-#{ floor($i) } {
+    padding-left: $i * 1rem;
+  }
+  .pt-#{ floor($i) }.pt-#{ floor($i) } {
+    padding-top: $i * 1rem;
+  }
+  .pb-#{ floor($i) }.pb-#{ floor($i) } {
+    padding-bottom: $i * 1rem;
+  }
+  .px-#{ floor($i) }.px-#{ floor($i) } {
+    padding-left: $i * 1rem;
+    padding-right: $i * 1rem;
+  }
+  .py-#{ floor($i) }.py-#{ floor($i) } {
+    padding-top: $i * 1rem;
+    padding-bottom: $i * 1rem;
+  }
+}
+
+// existing styles
+.padding {
+  &.padding-top-no {
+    padding-top: 0;
+  }
+  &.padding-bottom-no {
+    padding-bottom: 0;
+  }
+  &.padding-right-no {
+    padding-right: 0;
+  }
+  &.padding-left-no {
+    padding-left: 0;
+  }
+  &.padding-top-sm {
+    padding-top: 5px;
+  }
+  &.padding-bottom-sm {
+    padding-bottom: 5px;
+  }
+  &.padding-right-sm {
+    padding-right: 5px;
+  }
+  &.padding-left-sm {
+    padding-left: 5px;
+  }
+  &.padding-top-md {
+    padding-top: 15px;
+  }
+  &.padding-bottom-md {
+    padding-bottom: 15px;
+  }
+  &.padding-right-md {
+    padding-right: 15px;
+  }
+  &.padding-left-md {
+    padding-left: 15px;
+  }
+  &.padding-top-lg {
+    padding-top: 20px;
+  }
+  &.padding-bottom-lg {
+    padding-bottom: 20px;
+  }
+  &.padding-right-lg {
+    padding-right: 20px;
+  }
+  &.padding-left-lg {
+    padding-left: 20px;
+  }
+}
+
+.margin {
+  &.margin-top-sm {
+    margin-top: 5px;
+  }
+  &.margin-bottom-sm {
+    margin-bottom: 5px;
+  }
+  &.margin-right-sm {
+    margin-right: 5px;
+  }
+  &.margin-left-sm {
+    margin-left: 5px;
+  }
+  &.margin-top-md {
+    margin-top: 15px;
+  }
+  &.margin-bottom-md {
+    margin-bottom: 15px;
+  }
+  &.margin-right-md {
+    margin-right: 15px;
+  }
+  &.margin-left-md {
+    margin-left: 15px;
+  }
+  &.margin-top-lg {
+    margin-top: 20px;
+  }
+  &.margin-bottom-lg {
+    margin-bottom: 20px;
+  }
+  &.margin-right-lg {
+    margin-right: 20px;
+  }
+  &.margin-left-lg {
+    margin-left: 20px;
+  }
+}

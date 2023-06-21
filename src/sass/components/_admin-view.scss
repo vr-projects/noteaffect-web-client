@@ -1,0 +1,15 @@
+.admin-view {
+  .admin-series-item,
+  .admin-department-item {
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #fafafa;
+
+    &:hover {
+      background-color: #fcfcfc;
+    }
+    .add-row {
+      text-align: right;
+    }
+  }
+}

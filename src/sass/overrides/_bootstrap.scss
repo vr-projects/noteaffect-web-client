@@ -1,0 +1,102 @@
+// TODO tech debt confirm correct z-index
+[id^='tooltip'],
+[id$='tooltip'] {
+  z-index: $z-tooltip;
+}
+
+.dropdown-menu > li > a {
+  padding: 0.75rem 1.5rem;
+}
+
+.container {
+  max-width: 100%;
+}
+
+.alert {
+  border-radius: 0;
+}
+
+.form-control {
+  border-radius: 0;
+}
+
+// fix addon
+.input-group {
+  position: relative;
+
+  .input-group-addon {
+    padding: 8px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 33px;
+    z-index: $z-input-group-addon;
+  }
+  > input.form-control {
+    margin-left: 33px;
+  }
+}
+
+.btn-link.btn-link {
+  box-shadow: none;
+}
+
+.btn-link-success {
+  color: $na-quadrary-500;
+  &:hover,
+  &:focus {
+    color: $na-quadrary-900;
+  }
+}
+.btn-link-light {
+  color: $na-white;
+  &:hover,
+  &:focus {
+    color: $na-light-grey;
+  }
+}
+
+// btn-link-flat - custom button without background, box shadow
+.btn-link-flat.btn-link-flat {
+  @extend .btn-link;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+// subtler list groups
+.list-group {
+  .list-group-item {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid $na-hr-grey;
+    &:last-of-type() {
+      border-bottom: none;
+    }
+  }
+}
+
+// text overrides
+.text-danger.text-danger.text-danger.text-danger.text-danger.text-danger {
+  color: $na-danger;
+}
+.text-info.text-info.text-info.text-info.text-info.text-info {
+  color: $na-info;
+}
+.text-primary.text-primary.text-primary.text-primary.text-primary.text-primary {
+  color: $na-primary;
+}
+.text-success.text-success.text-success.text-success.text-success.text-success {
+  color: $na-success;
+}
+.text-success-light.text-success-light.text-success-light.text-success-light.text-success-light.text-success-light.text-success-light.text-success-light.text-success-light {
+  color: $na-quadrary-300;
+}
+.text-warning.text-warning.text-warning.text-warning.text-warning.text-warning {
+  color: $na-warning;
+}
+.text-default.text-default.text-default.text-default.text-default.text-default {
+  color: $na-grey;
+}

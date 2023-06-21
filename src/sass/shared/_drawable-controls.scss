@@ -1,0 +1,29 @@
+.drawable-controls {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+
+  img {
+    width: 24px;
+    height: 24px;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+  }
+
+  .divider {
+    width: 0px;
+    border-left: 1px solid #eaeaea;
+    margin: 3px 5px 3px 10px;
+    display: inline-block;
+    height: 34px;
+    vertical-align: middle;
+  }
+}
+.pdf-drawable-controls-container {
+  margin-bottom: 16px;
+}

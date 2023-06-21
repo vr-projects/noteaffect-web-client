@@ -1,0 +1,39 @@
+{
+  // Set the default
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "[html]": {
+    "editor.formatOnSave": false
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    // For ESLint
+    "source.fixAll.eslint": true,
+    // For Stylelint
+    "source.fixAll.stylelint": true
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#d04649",
+    "activityBar.activeBackground": "#d04649",
+    "activityBar.activeBorder": "#37cb34",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#37cb34",
+    "activityBarBadge.foreground": "#15202b",
+    "titleBar.activeBackground": "#b52e31",
+    "titleBar.inactiveBackground": "#b52e3199",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "statusBar.background": "#b52e31",
+    "statusBarItem.hoverBackground": "#d04649",
+    "statusBar.foreground": "#e7e7e7"
+  },
+  "peacock.color": "#b52e31",
+  "editor.cursorStyle": "block",
+  "editor.cursorBlinking": "smooth"
+}

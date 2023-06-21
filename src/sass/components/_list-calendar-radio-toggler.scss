@@ -1,0 +1,14 @@
+.list-calendar-radio-toggler {
+  display: flex;
+  align-items: center;
+
+  .title {
+    margin: 0 1rem;
+  }
+
+  &,
+  .btn-group,
+  .btn {
+    height: 33px;
+  }
+}

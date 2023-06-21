@@ -1,0 +1,19 @@
+.analytics-filter-multi-radio-toggler {
+  display: flex;
+  flex-direction: column;
+
+  .analytics-filter-multi-radio-toggler--title {
+  }
+  .analytics-filter-multi-radio-toggler--toggler {
+    display: flex;
+    .multi-radio-toggler--label {
+      margin-left: auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .multi-radio-toggler--toggles {
+      flex-shrink: 0;
+    }
+  }
+}

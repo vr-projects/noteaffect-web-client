@@ -1,0 +1,41 @@
+<html id="print-app">
+
+<head>
+    <title>NoteAffect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script type="text/javascript">
+        window.appEnvironment = {}//@appEnvironment
+        ;
+        window.userInformation = {}//@userInformation
+        ;
+        window.userPermissions = {}//@userPermissions
+        ;
+        window.exportData = {}//@exportData
+        ;
+    </script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700|Quicksand:300,400,500,700|Raleway:300,400,700" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.0/dist/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fabric@2.2.3/dist/fabric.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/wordcloud@1.1.0/src/wordcloud2.min.js"></script>
+    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.publicPath.replace('/js/', '/css/') %>styles.css?@COMMITHASH" />
+</head>
+
+<body id="print-body">
+    <div id="print-content"></div>
+    <script>
+        if (typeof window.__REACT_DEVTOOLS_GLOBAL_HOOK__ === 'object' && typeof process !== 'undefined' && process.env.NODE_ENV === 'production') {
+            __REACT_DEVTOOLS_GLOBAL_HOOK__.inject = function() {};
+        }
+    </script>
+    <% for (var idx = 0; idx < webpack.entrypoints.print.assets.length; idx++) { %>
+    <script src="<%= htmlWebpackPlugin.files.publicPath %><%= webpack.entrypoints.print.assets[idx] %>" type="text/javascript"></script> <% } %>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+.corp-meeting-form {
+  .lock-icon {
+    margin-left: 8px;
+    color: $na-medium-grey;
+  }
+  .available-until {
+    position: relative;
+
+    .input-clear-button {
+      position: absolute;
+      right: 0;
+      bottom: 5px;
+      min-width: unset;
+      border: none;
+      box-shadow: none;
+      background: none;
+    }
+  }
+}

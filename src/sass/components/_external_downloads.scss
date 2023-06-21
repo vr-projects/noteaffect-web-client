@@ -1,0 +1,49 @@
+.external-downloads {
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .downloads-grid {
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-areas:
+      'downloadsTitle downloadsTitle'
+      'macDownload windowsDownload';
+    .downloads-grid-title {
+      grid-area: downloadsTitle;
+      text-align: center;
+    }
+    .downloads-grid-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &.mac-download {
+        grid-area: macDownload;
+        .downloads-os-icon {
+          &.active-os {
+            color: $na-quadrary;
+          }
+        }
+      }
+      &.windows-download {
+        grid-area: windowsDownload;
+        .downloads-os-icon {
+          &.active-os {
+            color: $na-primary-light;
+          }
+        }
+      }
+
+      .downloads-os-icon {
+        font-size: 6rem;
+        margin-bottom: 3rem;
+        color: $na-grey;
+      }
+    }
+  }
+}

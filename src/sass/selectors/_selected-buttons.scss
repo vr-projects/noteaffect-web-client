@@ -1,0 +1,20 @@
+%unselected-button {
+  color: #999;
+  &:hover {
+    background-color: #f9f4f4;
+    color: #666;
+  }
+}
+
+%selected-button {
+  background: #bc003a;
+  background: -moz-linear-gradient(-45deg, #bc003a 0%, #970030 100%);
+  background: -webkit-linear-gradient(-45deg, #bc003a 0%, #970030 100%);
+  background: linear-gradient(135deg, #bc003a 0%, #970030 100%);
+  color: white;
+}
+
+%selected-button-simple {
+  background: #bc003a;
+  color: white;
+}

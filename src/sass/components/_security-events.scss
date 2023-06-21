@@ -1,0 +1,16 @@
+.security-events {
+  display: flex;
+  flex-direction: column;
+}
+
+.security-report {
+  @include na-container-lifted;
+
+  .report-table {
+    margin-bottom: 0;
+
+    td {
+      font-size: 14px;
+    }
+  }
+}

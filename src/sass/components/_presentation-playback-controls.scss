@@ -1,0 +1,35 @@
+.presentation-playback-controls {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+
+  .presentation-playback-controls--controls {
+    display: block;
+    margin-left: 1rem;
+  }
+  .presentation-playback-controls--sharing {
+    align-self: flex-end;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    .presentation-playback-controls--sharing-checkbox {
+      margin-right: 1rem;
+    }
+    .wait-spinner-container {
+      .wait-spinner {
+        padding: 10px;
+        margin-right: 1.5rem;
+      }
+    }
+    .presentation-playback-controls--sharing-label {
+      font-weight: 600;
+    }
+
+    .presentation-playback-controls--loader {
+      position: relative;
+      align-self: stretch;
+      width: 100%;
+    }
+  }
+}

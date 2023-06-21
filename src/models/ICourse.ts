@@ -1,0 +1,43 @@
+import SeriesState from '../enums/SeriesState';
+import SeriesType from '../enums/SeriesType';
+import SharePermission from '../enums/SharePermission';
+import ISharedBy from './ISharedBy';
+import ICoursePresentation from './ICoursePresentation';
+import IParticipant from './IParticipant';
+import ICourseTag from './ICourseTag';
+import IPeriod from './IPeriod';
+import IUnregisteredParticipant from './IUnregisteredParticipant';
+import IObserver from './IObserver';
+import IDistributionInvitation from './IDistributionInvitation';
+import IDocument from './IDocument';
+import IQuestionCount from './IQuestionCount';
+
+export default interface ICourse {
+  displayId: string;
+  id: number;
+  name: string;
+  description: string;
+  instructors: string[];
+  currentPresentation: number;
+  courseStart: number;
+  courseEnd: number;
+  availableUntil: number;
+  lectures: ICoursePresentation[];
+  participants: IParticipant[];
+  canEdit: boolean;
+  unregisteredParticipants?: IUnregisteredParticipant[];
+  state: SeriesState;
+  period?: IPeriod;
+  departmentId?: number;
+  periodId?: number;
+  courseTags?: ICourseTag[];
+  seriesType?: SeriesType;
+  sharePermission?: SharePermission;
+  sharedBy?: ISharedBy;
+  location?: string;
+  observers?: IObserver[];
+  distributionInvitations?: IDistributionInvitation[];
+  hasNewViolation?: boolean;
+  questionCount?: IQuestionCount;
+  documents?: IDocument[];
+}

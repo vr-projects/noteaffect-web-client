@@ -1,0 +1,277 @@
+{
+    "id": 219,
+    "courseId": 712,
+    "started": 1522681200,
+    "ended": null,
+    "slides": 20,
+    "slideData": [{
+            "id": 127,
+            "slide": 1,
+            "sequence": 1,
+            "duration": 10,
+            "imageUrl": "/samples/images/1.1.png"
+        },
+        {
+            "id": 128,
+            "slide": 2,
+            "sequence": 1,
+            "duration": 30,
+            "imageUrl": "/samples/images/2.1.png"
+        },
+        {
+            "id": 129,
+            "slide": 3,
+            "sequence": 1,
+            "duration": 30,
+            "imageUrl": "/samples/images/3.1.png"
+        },
+        {
+            "id": 130,
+            "slide": 4,
+            "sequence": 1,
+            "duration": 100,
+            "imageUrl": "/samples/images/4.1.png",
+            "question": {
+                "id": 1,
+                "question": "Which point is the most important?",
+                "answers": [{
+                        "id": 1,
+                        "type": "choice",
+                        "value": "Mildly important point",
+                        "order": 0
+                    },
+                    {
+                        "id": 2,
+                        "type": "choice",
+                        "value": "Ultra important point",
+                        "order": 1
+                    },
+                    {
+                        "id": 3,
+                        "type": "choice",
+                        "value": "Marginally important point",
+                        "order": 2
+                    },
+                    {
+                        "id": 4,
+                        "type": "choice",
+                        "value": "Very important point",
+                        "order": 3
+                    }
+                ]
+            }
+        },
+        {
+            "id": 131,
+            "slide": 5,
+            "sequence": 1,
+            "duration": 90,
+            "imageUrl": "/samples/images/5.1.png"
+        },
+        {
+            "id": 132,
+            "slide": 5,
+            "sequence": 2,
+            "duration": 90,
+            "imageUrl": "/samples/images/5.2.png"
+        },
+        {
+            "id": 133,
+            "slide": 5,
+            "sequence": 3,
+            "duration": 90,
+            "imageUrl": "/samples/images/5.3.png"
+        },
+        {
+            "id": 134,
+            "slide": 6,
+            "sequence": 1,
+            "duration": 100,
+            "imageUrl": "/samples/images/6.1.png",
+            "question": {
+                "id": 2,
+                "question": "How would you rate this slide?",
+                "answers": [{
+                    "id": 1,
+                    "type": "rating",
+                    "order": 0,
+                    "options": {
+                        "minRange": 1,
+                        "maxRange": 5,
+                        "labels": {
+                            "min": "Horrible.  Just horrible.",
+                            "mid": "I could go either way",
+                            "max": "Best slide I've ever seen"
+                        }
+                    }
+                }]
+            }
+        },
+        {
+            "id": 135,
+            "slide": 7,
+            "sequence": 1,
+            "duration": 100,
+            "imageUrl": "/samples/images/7.1.png",
+            "question": {
+                "id": 3,
+                "question": "In a word, how would you describe this slide?",
+                "answers": [{
+                    "id": 1,
+                    "type": "freeform",
+                    "order": 0,
+                    "options": {
+                        "required": true
+                    }
+                }]
+            }
+        },
+        {
+            "id": 136,
+            "slide": 7,
+            "sequence": 2,
+            "duration": 90,
+            "imageUrl": "/samples/images/7.2.png"
+        },
+        {
+            "id": 137,
+            "slide": 8,
+            "sequence": 1,
+            "duration": 90,
+            "imageUrl": "/samples/images/8.1.png"
+        },
+        {
+            "id": 138,
+            "slide": 9,
+            "sequence": 1,
+            "duration": 90,
+            "imageUrl": "/samples/images/9.1.png"
+        },
+        {
+            "id": 139,
+            "slide": 10,
+            "sequence": 1,
+            "duration": 90,
+            "imageUrl": "/samples/images/10.1.png"
+        },
+        {
+            "id": 140,
+            "slide": 11,
+            "sequence": 1,
+            "duration": 90,
+            "imageUrl": "/samples/images/11.1.png"
+        },
+        {
+            "id": 141,
+            "slide": 11,
+            "sequence": 2,
+            "duration": 90,
+            "imageUrl": "/samples/images/11.2.png"
+        },
+        {
+            "id": 142,
+            "slide": 11,
+            "sequence": 3,
+            "duration": 90,
+            "imageUrl": "/samples/images/11.3.png"
+        },
+        {
+            "id": 143,
+            "slide": 12,
+            "sequence": 1,
+            "duration": 90,
+            "imageUrl": "/samples/images/12.1.png"
+        },
+        {
+            "id": 144,
+            "slide": 13,
+            "sequence": 1,
+            "duration": 90,
+            "imageUrl": "/samples/images/13.1.png"
+        },
+        {
+            "id": 145,
+            "slide": 14,
+            "sequence": 1,
+            "duration": 90,
+            "imageUrl": "/samples/images/14.1.png"
+        },
+        {
+            "id": 146,
+            "slide": 15,
+            "sequence": 1,
+            "duration": 90,
+            "imageUrl": "/samples/images/15.1.png"
+        },
+        {
+            "id": 147,
+            "slide": 15,
+            "sequence": 2,
+            "duration": 90,
+            "imageUrl": "/samples/images/15.2.png"
+        },
+        {
+            "id": 148,
+            "slide": 15,
+            "sequence": 3,
+            "duration": 90,
+            "imageUrl": "/samples/images/15.3.png"
+        },
+        {
+            "id": 149,
+            "slide": 15,
+            "sequence": 4,
+            "duration": 90,
+            "imageUrl": "/samples/images/15.4.png"
+        },
+        {
+            "id": 150,
+            "slide": 16,
+            "sequence": 1,
+            "duration": 100,
+            "imageUrl": "/samples/images/16.1.png"
+        },
+        {
+            "id": 151,
+            "slide": 17,
+            "sequence": 1,
+            "duration": 110,
+            "imageUrl": "/samples/images/17.1.png"
+        },
+        {
+            "id": 152,
+            "slide": 18,
+            "sequence": 1,
+            "duration": 100,
+            "imageUrl": "/samples/images/18.1.png"
+        },
+        {
+            "id": 153,
+            "slide": 19,
+            "sequence": 1,
+            "duration": 90,
+            "imageUrl": "/samples/images/19.1.png"
+        },
+        {
+            "id": 154,
+            "slide": 19,
+            "sequence": 2,
+            "duration": 100,
+            "imageUrl": "/samples/images/19.2.png"
+        },
+        {
+            "id": 155,
+            "slide": 20,
+            "sequence": 1,
+            "duration": 90,
+            "imageUrl": "/samples/images/20.1.png"
+        },
+        {
+            "id": 156,
+            "slide": 20,
+            "sequence": 2,
+            "duration": 90,
+            "imageUrl": "/samples/images/20.2.png"
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+.standalone-helper-popover {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 36px;
+  height: 36px;
+  z-index: $z-standalone-helper-popover;
+  background-color: white;
+  color: $na-hr-grey;
+  border-radius: 36px;
+  text-align: center;
+  box-shadow: 0px 10px 5px -5px rgba(0, 0, 0, 0.15);
+
+  svg {
+    line-height: 35px;
+    font-size: 16pt;
+  }
+}
+
+.standalone-tools {
+  p {
+    font-size: 9pt;
+    font-weight: bold;
+  }
+}

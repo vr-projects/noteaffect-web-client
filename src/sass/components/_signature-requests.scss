@@ -1,0 +1,23 @@
+.signature-requests {
+  .documents-list {
+    padding-bottom: 0;
+    padding-top: 0;
+
+    &:last-of-type {
+      margin-bottom: 48px;
+    }
+  }
+  .table {
+    margin-bottom: 0;
+  }
+  h2 {
+    margin: 8px 0;
+  }
+}
+.document-preview {
+  .signer-controls {
+    border-top: 1px solid $na-hr-grey;
+    padding-top: 16px;
+    margin-top: 24px;
+  }
+}

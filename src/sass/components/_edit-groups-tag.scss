@@ -1,0 +1,17 @@
+.edit-groups-tag {
+  border-bottom: 1px solid #fafafa;
+  padding: 5px 0;
+
+  a.btn {
+    padding: 3px;
+    min-width: 100px;
+
+    svg {
+      margin-right: 5px;
+    }
+  }
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}

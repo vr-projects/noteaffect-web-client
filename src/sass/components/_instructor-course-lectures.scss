@@ -1,0 +1,45 @@
+.instructor-course-lectures {
+  display: block;
+
+  .header-container {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    @include media-up(sm) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .breadcrumb-container {
+      margin-right: auto;
+    }
+
+    .cta-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .start-lecture-btn,
+      .download-broadcaster-btn {
+        align-self: center;
+      }
+
+      @include media-up(sm) {
+        margin-left: auto;
+      }
+    }
+  }
+
+  .metadata-container {
+    min-width: 100%;
+    width: 100%;
+
+    @include media-up(md) {
+      min-width: calc(100% / 1.5);
+      width: calc(100% / 1.5);
+    }
+  }
+}

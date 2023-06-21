@@ -1,0 +1,52 @@
+.pdf-viewer {
+  .react-pdf__Document {
+    .react-pdf__Page {
+      overflow-y: auto;
+      overflow-x: auto;
+      box-shadow: 0px 0px 4px 0px black;
+      min-height: 40vh;
+      background-color: $na-beastly-grey;
+      canvas.react-pdf__Page__canvas {
+        margin: 0 auto;
+      }
+    }
+    .react-pdf__message.react-pdf__message--error,
+    .react-pdf__message.react-pdf__message--no-data {
+      background-color: lighten($na-tertiary-100, 30%);
+      padding: 3rem;
+      border: 1px solid $na-danger;
+      border-radius: 4px;
+      color: $na-danger;
+      font-weight: bold;
+    }
+    .react-pdf__message.react-pdf__message--loading {
+      .wait-spinner-container {
+        padding: 3rem;
+        background: $na-light-grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  .pdf-controls-container {
+    display: flex;
+    margin: 0 auto;
+
+    .pdf-controls {
+      margin: 1rem auto 0;
+      background: $na-primary;
+      border-radius: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      align-items: center;
+      width: 16rem;
+
+      .page-numbers {
+        margin: 0 2rem;
+        color: $na-white;
+      }
+    }
+  }
+}

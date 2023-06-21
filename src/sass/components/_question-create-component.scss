@@ -1,0 +1,20 @@
+.question-create-component {
+  .question-choice-list {
+    table-layout: fixed;
+    width: 100%;
+    max-width: 100%;
+    td,
+    th {
+      padding: 5px;
+      &.input {
+        width: 60%;
+      }
+      &.correct,
+      &.move,
+      &.delete {
+        width: 10%;
+        text-align: center;
+      }
+    }
+  }
+}

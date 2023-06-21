@@ -1,0 +1,41 @@
+.series-metadata {
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: 1fr;
+
+  @include media-up(xs) {
+    grid-template-columns: 1fr 0.5fr;
+  }
+
+  .series-info {
+    .series-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4px;
+      padding-bottom: 4px;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $na-light-grey;
+      }
+      &:last-of-type {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .series-label {
+        font-size: 12px;
+        font-weight: bold;
+        margin-right: 8px;
+      }
+      .series-data {
+        text-align: right;
+        word-break: break-word;
+      }
+    }
+  }
+  .sharing-info {
+  }
+  .test-class {
+    font-size: 12345px;
+  }
+}

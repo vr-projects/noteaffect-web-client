@@ -1,0 +1,140 @@
+import * as React from 'react';
+import { Button } from 'react-bootstrap';
+import { FaPen } from 'react-icons/fa';
+import {
+  SrUiComponent,
+  LoadStates,
+  LoadIndicator,
+  LoadMask,
+  Popover,
+} from 'react-strontium';
+import ApiHelpers from 'react-strontium/dist/api/ApiHelpers';
+import Localizer from '../../utilities/Localizer';
+import { DispatchProp, connect } from 'react-redux';
+import * as DepartmentsActions from '../../store/departments/DepartmentsActions';
+import IAdminTag from '../../models/IAdminTag';
+
+interface IGroupRenamePopover extends DispatchProp<any> {
+  group: IAdminTag;
+}
+
+interface IGroupRenameState {
+  name: string;
+  loading: LoadStates;
+  errorMessage: string;
+}
+
+class GroupRenamePopover extends SrUiComponent<
+  IGroupRenamePopover,
+  IGroupRenameState
+> {
+  initialState() {
+    return {
+      name: this.props.group.name,
+      loading: LoadStates.Unloaded,
+      errorMessage: undefined,
+    };
+  }
+
+  onNewProps(props: IGroupRenamePopover) {
+    if (props.group) {
+      this.setPartial({ name: props.group.name });
+    }
+  }
+
+  cancel() {
+    this.setState({
+      name: this.props.group.name,
+      loading: LoadStates.Unloaded,
+      errorMessage: undefined,
+    });
+    (this.refs['open-button'] as HTMLAnchorElement).click();
+  }
+
+  async save() {
+    if ((this.state.name || '').trim().length === 0) {
+      this.setPartial({
+        loading: LoadStates.Failed,
+        errorMessage: Localizer.get('Please enter a present and valid name.'),
+      });
+      return;
+    }
+
+    this.setPartial({ loading: LoadStates.Loading, errorMessage: undefined });
+    const resp = await ApiHelpers.update(
+      `departments/tags/${this.props.group.id}`,
+      { name: this.state.name }
+    );
+    if (resp.good) {
+      this.setState({
+        name: undefined,
+        loading: LoadStates.Unloaded,
+        errorMessage: undefined,
+      });
+      (this.refs['open-button'] as HTMLAnchorElement).click();
+      this.props.dispatch(DepartmentsActions.getDepartments());
+    } else {
+      this.setPartial({ loading: LoadStates.Failed });
+    }
+  }
+
+  performRender() {
+    const poContent = (
+      <>
+        <div className="rel">
+          <p className="helper-message">{Localizer.get('Group name')}</p>
+          <input
+            placeholder={Localizer.get('Group name')}
+            readOnly={this.state.loading === LoadStates.Loading}
+            autoFocus
+            type="text"
+            className="form-control"
+            value={this.state.name || ''}
+            onChange={(e) => this.setPartial({ name: e.target.value })}
+          />
+          {this.state.loading !== LoadStates.Loading ? (
+            <div className="margin margin-top-sm margin-bottom-sm">
+              <Button bsStyle="info" onClick={() => this.save()}>
+                {Localizer.get('Save name')}
+              </Button>
+              <Button bsStyle="default" onClick={() => this.cancel()}>
+                {Localizer.get('Cancel')}
+              </Button>
+            </div>
+          ) : null}
+          <LoadMask state={this.state.loading} />
+        </div>
+        <LoadIndicator
+          state={this.state.loading}
+          loadingMessage={Localizer.get('Saving name...')}
+          errorMessage={
+            this.state.errorMessage ||
+            Localizer.get(
+              'There was a problem saving the name.  Please try later.'
+            )
+          }
+        />
+      </>
+    );
+
+    return (
+      <Popover
+        title={Localizer.get('Rename Department')}
+        rootClose={false}
+        id="update-lecture-name"
+        content={poContent}
+      >
+        <>
+          {/* // TODO tech debt, repeated code, a tag */}
+          <a ref="open-button">
+            <FaPen className="light" />
+          </a>
+        </>
+      </Popover>
+    );
+  }
+}
+
+export default connect<any, void, IGroupRenamePopover>(() => {
+  return {};
+})(GroupRenamePopover);

@@ -1,0 +1,94 @@
+.custom-sound-player {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .custom-sound-player-play-button {
+    flex-shrink: 0;
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+
+    svg.sb-soundplayer-icon {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+  }
+  .custom-sound-player-timer {
+    flex-shrink: 0;
+    white-space: pre;
+    min-width: 9rem;
+    margin: 0 0.5rem;
+  }
+  .custom-sound-player-progress-wrapper {
+    flex-shrink: 1;
+    background: $na-light-grey;
+    border-radius: 40px;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 0.5rem;
+    margin: 0 0.5rem;
+
+    .custom-sound-player-progress {
+      background-color: transparent;
+      border: 1px solid $na-grey;
+      border-radius: 4px;
+      height: 8px;
+      margin: 0 0.5rem;
+      &:hover {
+        background-color: $na-alto-grey;
+        cursor: pointer !important;
+      }
+
+      .custom-sound-player-progress-inner {
+        background-color: $na-primary-100;
+        height: 8px;
+        border-radius: 4px;
+        &:hover {
+          background-color: $na-primary-300;
+        }
+        &:active {
+          background-color: $na-primary-light;
+        }
+      }
+    }
+  }
+
+  .custom-sound-player-volume-control {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+
+    .custom-sound-player-volume-control-button {
+      flex-shrink: 0;
+      height: 40px;
+      width: 40px;
+      border-radius: 40px;
+    }
+    .custom-sound-player-volume-control-range {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+
+    input[type='range']::-webkit-slider-runnable-track,
+    input[type='range']::-moz-range-track {
+      -webkit-appearance: none;
+      background-color: $na-primary-100;
+      height: 8px;
+      border-radius: 4px;
+      &:hover {
+        background-color: $na-primary-300;
+      }
+      &:active {
+        background-color: $na-primary-light;
+      }
+    }
+  }
+}
+
+#custom-sound-player-mute-tooltip {
+  transform: translateX(-40px);
+}

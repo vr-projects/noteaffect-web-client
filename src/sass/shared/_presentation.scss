@@ -1,0 +1,64 @@
+.presentation-content {
+  position: relative;
+  flex: 1 1 auto;
+
+  .presentation-renderer {
+    width: 100%;
+    padding-bottom: 56.25%;
+    position: relative;
+    background-size: contain;
+    background-position: center center;
+    background-color: #fafafa;
+    @include multitype-transition(background-image);
+    background-repeat: no-repeat;
+
+    .state-message {
+      position: absolute;
+      top: 45%;
+      width: 100%;
+      left: 0;
+      right: 0;
+      font-size: 14pt;
+      color: $na-hr-grey;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+}
+
+.course-presentation {
+  &.full-screen {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $na-white;
+    padding: 10px;
+    z-index: $z-fullscreen-presentation;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+// fullscreen live-presentation
+.live-presentation-wrapper {
+  .presentation-menu {
+    .presentation-controls {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-right: 1rem;
+    }
+  }
+}
+.full-screen {
+  .live-presentation-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,57 @@
+.average-results-content {
+  .average {
+    font-size: 100pt; // TODO tech debt use px or rem
+    font-weight: bold;
+  }
+
+  .out-of {
+    font-size: 12pt; // TODO tech debt use px or rem, search sass file for any other uses of pt
+    color: #999;
+  }
+}
+
+.live-polling-view {
+}
+
+#polling-view {
+  html,
+  body {
+    background-color: white;
+    overflow-y: hidden;
+  }
+
+  .loading-spinner {
+    position: relative;
+    display: inline-block;
+    margin: 30px;
+  }
+
+  .average-value-results {
+    position: relative;
+
+    .average-results-content {
+      position: absolute;
+
+      .average {
+        font-size: 148pt; // TODO use px or rem
+        font-weight: bold;
+      }
+
+      .out-of {
+        font-size: 12pt;
+        color: #999;
+      }
+    }
+  }
+}
+
+table.polling-results {
+  tr {
+    &.correct {
+      background-color: rgba(226, 255, 209, 0.5);
+      .answer-choice {
+        padding-bottom: 10px;
+      }
+    }
+  }
+}

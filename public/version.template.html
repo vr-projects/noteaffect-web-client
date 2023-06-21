@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <script src="https://releases.noteaffect.com/@BRANCH/js/web-client_version.js?@COMMITHASH" type="text/javascript"></script>
+    <script src="https://releases.noteaffect.com/@BRANCH/js/web-server_version.js?@COMMITHASH" type="text/javascript"></script>
+    <script src="https://releases.noteaffect.com/@BRANCH/js/scheduled-jobs_version.js??@COMMITHASH" type="text/javascript"></script>
+    <script type="text/javascript">
+      function trigger() {
+        load(c);
+        load(s);
+        load(sj);
+      }
+
+      function load(el) {
+        if (!!el.project) {
+          var element = document.getElementById(el.prefix+"-item");
+          element.className = element.className.replace(/\hidden\b/g, "");
+        }
+
+        if (!!el.project) document.getElementById(el.prefix+"-project").innerHTML = el.project;
+        if (!!el.branch) document.getElementById(el.prefix+"-branch").innerHTML = el.branch;
+        if (!!el.commit) document.getElementById(el.prefix+"-commit").innerHTML = el.commit;
+        if (!!el.pipeline) document.getElementById(el.prefix+"-pipeline").innerHTML = el.pipeline;
+        if (!!el.user) document.getElementById(el.prefix+"-user").innerHTML = el.user;
+        if (!!el.trigger) document.getElementById(el.prefix+"-trigger").innerHTML = el.trigger;
+        if (!!el.buildtime) document.getElementById(el.prefix+"-buildtime").innerHTML = el.buildtime;
+      }
+    </script>
+    <style>
+      body {
+        font-family: Arial;
+        font-size: .8em;
+      }
+      .item div:first-child {
+        font-weight: bold;
+        margin-top: 10px;
+      }
+      .item div:not(:first-child) span {
+        font-size: .6em;
+      }
+      .item div:not(:first-child) span:first-child {
+        font-weight: bold;
+        display: inline-block;
+        margin: 2px 0 0 15px;
+        width: 60px;
+      }
+      .hidden {
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body onload="javascript:trigger();">
+    <div id="c-item" class="item hidden">
+      <div><span id="c-project"></span></div>
+      <div><span>Branch: </span><span id="c-branch"></span></div>
+      <div><span>Commit: </span><span id="c-commit"></span></div>
+      <div><span>Pipeline: </span><span id="c-pipeline"></span></div>
+      <div><span>User: </span><span id="c-user"></span></div>
+      <div><span>Trigger: </span><span id="c-trigger"></span></div>
+      <div><span>Build Time: </span><span id="c-buildtime"></span></div>
+    </div>
+    <div id="s-item" class="item hidden">
+      <div><span id="s-project"></span></div>
+      <div><span>Branch:</span><span id="s-branch"></span></div>
+      <div><span>Commit:</span><span id="s-commit"></span></div>
+      <div><span>Pipeline:</span><span id="s-pipeline"></span></div>
+      <div><span>User:</span><span id="s-user"></span></div>
+      <div><span>Trigger:</span><span id="s-trigger"></span></div>
+      <div><span>Build Time:</span><span id="s-buildtime"></span></div>
+    </div>
+    <div id="sj-item" class="item hidden">
+      <div><span id="sj-project"></span></div>
+      <div><span>Branch:</span><span id="sj-branch"></span></div>
+      <div><span>Commit:</span><span id="sj-commit"></span></div>
+      <div><span>Pipeline:</span><span id="sj-pipeline"></span></div>
+      <div><span>User:</span><span id="sj-user"></span></div>
+      <div><span>Trigger:</span><span id="sj-trigger"></span></div>
+      <div><span>Build Time:</span><span id="sj-buildtime"></span></div>
+    </div>
+  </body>
+</html>

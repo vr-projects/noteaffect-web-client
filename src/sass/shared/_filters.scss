@@ -1,0 +1,24 @@
+.search-filter {
+  input {
+    height: 34px;
+    width: 100%;
+    padding: 5px 5px 5px 34px;
+    border: none;
+    background-color: #fafafa;
+    background-repeat: no-repeat;
+    background-position: 4px center;
+    background-size: 24px;
+  }
+}
+
+.list-filters {
+  padding: 10px 0 0 0;
+
+  input {
+    margin-left: 15px;
+
+    &:first-of-type {
+      margin-left: 0px;
+    }
+  }
+}

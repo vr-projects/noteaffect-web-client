@@ -1,0 +1,99 @@
+.lecture-reviewer {
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &.instructor-lecture-reviewer {
+    .presentation-container {
+      .presentation-questions-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        @include media-up(sm) {
+          display: flex;
+          flex-direction: row;
+        }
+        .presentation-item {
+          @include media-up(sm) {
+            flex: 1 1 60%;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 60%;
+            width: 60%;
+          }
+        }
+        .questions-item {
+          @include media-up(sm) {
+            margin-left: 2rem;
+            flex: 1 1 40%;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 40%;
+            width: 40%;
+          }
+        }
+      }
+      .polls-item {
+        @include media-up(sm) {
+          flex: 1 1 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .meta-controls {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .metadata-container {
+      min-width: 100%;
+
+      @include media-up(sm) {
+        min-width: calc(100% / 1.5);
+      }
+    }
+
+    .link-container {
+      margin-top: 1rem;
+      position: relative;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      @include media-up(sm) {
+        margin-top: 0;
+        margin-left: 1rem;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+      @include media-up(md) {
+        margin-top: 0;
+        margin-left: 1rem;
+        position: absolute;
+        bottom: initial;
+        top: 0;
+        right: 0;
+      }
+    }
+
+    @include media-up(md) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .menu-viewer {
+    .h-menu-view-container {
+      .main-content {
+        background: $na-white;
+        padding: 1rem;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

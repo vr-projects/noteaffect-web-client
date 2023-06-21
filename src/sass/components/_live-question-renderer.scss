@@ -1,0 +1,40 @@
+.live-question {
+  .rating {
+    .rating-item {
+      display: inline-block;
+      margin: 0 5px 0 0;
+      padding: 5px;
+      font-size: 30pt;
+      color: #eee;
+      &.selected {
+        color: $na-secondary-300;
+      }
+
+      &:hover {
+        color: $na-grey;
+      }
+    }
+  }
+  .free-entry {
+    textarea {
+      margin: 0px;
+      width: 570px;
+      min-height: 200px;
+      height: 200px;
+      min-width: 100%;
+      max-width: 100%;
+      padding: 10px;
+    }
+  }
+  .selection {
+    input {
+      display: inline-block;
+      padding: 5px;
+    }
+    label {
+      display: inline-block;
+      padding: 5px;
+      margin-bottom: 5px;
+    }
+  }
+}

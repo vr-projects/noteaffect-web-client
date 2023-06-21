@@ -1,0 +1,13 @@
+.department-course {
+  padding-left: 16px;
+  &.list-item {
+    margin: 8px 0;
+  }
+  &.isExpired {
+    @include isExpired;
+
+    .instructor-course-item--expiration {
+      color: $na-tertiary;
+    }
+  }
+}

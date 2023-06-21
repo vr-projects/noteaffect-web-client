@@ -1,0 +1,26 @@
+.search-filter-input {
+  .form-group {
+    margin-bottom: 0;
+  }
+  .search-filter-input-container {
+    display: flex;
+    position: relative;
+
+    .search-filter-input-icon {
+      color: $na-grey;
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      font-size: 20px;
+      z-index: $z-search-filter-input-icon;
+    }
+
+    .search-filter-input-field.form-control {
+      margin-left: 0;
+    }
+  }
+
+  .search-filter-input-field {
+    padding-left: 35px;
+  }
+}

@@ -1,0 +1,33 @@
+.participants-grid {
+  background: $na-light-grey;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  grid-gap: 8px;
+
+  @include media-up(sm) {
+    grid-template-columns: repeat(2, minmax(49.5%, 50%));
+  }
+  @include media-up(md) {
+    grid-template-columns: repeat(3, minmax(33%, 33.33333%));
+  }
+
+  .grid-item {
+    background-color: $na-white;
+    padding: 8px;
+    border-radius: 0 8px;
+  }
+  .instructors-container {
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    @include media-up(sm) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    @include media-up(md) {
+      grid-column-start: 1;
+      grid-column-end: 4;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.share-permission-panel {
+  .title-container {
+    text-align: center;
+    padding: 4px;
+    .lock-icon {
+      color: $na-light-grey;
+      margin-right: 8px;
+    }
+    .title {
+      color: $na-white;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+  .well-container {
+  }
+}

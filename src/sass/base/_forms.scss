@@ -1,0 +1,51 @@
+form {
+  &.clearly-sectioned {
+    .form-group {
+      padding-bottom: 10px;
+      margin-left: 0;
+      margin-right: 0;
+      border-bottom: 1px solid #eee;
+      &:last-of-type {
+        border-bottom: none;
+      }
+      label {
+        font-size: 13pt;
+      }
+
+      input[type='radio'] + label {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.na-display-form-control {
+  display: flex;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  font-weight: 600;
+  min-height: 34px;
+  color: $na-primary;
+}
+
+input[type='file'] {
+  display: none;
+}
+
+.form-control[disabled] {
+  background-color: $na-light-grey;
+}
+
+.form-control[readonly] {
+  background-color: transparent;
+}
+
+// checkbox restyling
+input[type='checkbox'] {
+  height: 1.75rem;
+  width: 1.75rem;
+  margin: 0;
+}

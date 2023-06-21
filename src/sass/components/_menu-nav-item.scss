@@ -1,0 +1,137 @@
+.menu-nav-item.menu-nav-item {
+  display: flex;
+
+  .menu-nav-button {
+    flex-grow: 1;
+    width: auto;
+    position: relative;
+    border: none;
+    border-left: 3px solid $na-grey;
+    background: $na-light-grey;
+    text-align: left;
+    color: $na-medium-grey;
+    background-color: $na-light-grey;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding: 1.6rem;
+    margin-bottom: 4px;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      color: $na-dark-grey;
+      background-color: $na-white;
+      border-left-color: $na-grey;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+
+    // icon
+    svg {
+      font-size: 20px;
+    }
+
+    // label
+    span:not(.label) {
+      text-align: left;
+      margin-left: 12px;
+      white-space: nowrap;
+    }
+
+    // badge
+    span.label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    @include multitype-transition(
+      (background-color, border, border-color, color)
+    );
+  }
+
+  &.selected {
+    .menu-nav-button {
+      border-left-color: $na-tertiary;
+      font-weight: bold;
+      background-color: $na-white;
+      color: $na-dark-grey;
+
+      &:hover,
+      &:focus {
+        border-left-color: $na-tertiary;
+      }
+    }
+  }
+
+  &.horizontal {
+    width: auto;
+
+    .menu-nav-button {
+      border-left: none;
+      border-bottom: 3px solid $na-light-grey;
+      width: 200px;
+      background-color: $na-white;
+      padding: 1rem;
+      margin-right: 4px;
+      &:hover,
+      &:focus {
+        color: $na-dark-grey;
+        background-color: $na-light-grey;
+        border-bottom-color: $na-grey;
+      }
+    }
+  }
+  &.horizontal.selected {
+    .menu-nav-button {
+      border-bottom-color: $na-tertiary;
+    }
+  }
+
+  // Hide button
+  &.menu-collapser-btn-container {
+    flex: 1 1 100%;
+
+    .menu-collapser-btn {
+      flex: 1 1 auto;
+      align-self: flex-end;
+      background-color: $na-light-grey;
+      border: none;
+      border-left: 3px solid $na-grey;
+      text-align: left;
+      color: $na-medium-grey;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      padding: 1.6rem;
+      background-color: $na-light-grey;
+
+      // icon
+      svg {
+        font-size: 20px !important;
+      }
+
+      // label
+      span {
+        text-align: left;
+        margin-left: 12px;
+        white-space: nowrap;
+      }
+
+      // label
+      &:hover,
+      &:focus {
+        outline: none;
+        color: $na-dark-grey;
+        background-color: $na-white;
+      }
+
+      @include multitype-transition(
+        (background-color, border, border-color, color)
+      );
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.pdf-notes {
+  .pdf-notes-display.notes-container {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+
+    .notes {
+      flex: 1 1 auto;
+      padding: 1rem;
+    }
+
+    .pdf-shared-notes {
+      flex: 1 1 auto;
+      background-color: $na-gallery;
+      border: 1px solid $na-grey;
+      padding: 1rem;
+    }
+  }
+}

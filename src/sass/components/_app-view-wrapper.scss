@@ -1,0 +1,23 @@
+.app-view-wrapper {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  .app-view-wrapper-container {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .app-view-wrapper-body {
+      @extend .flex-grow-column-container;
+      padding-top: $na-header-height;
+      background-color: $na-light-grey;
+
+      &.container-fluid {
+        margin-right: initial;
+        margin-left: initial;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.app-footer {
+  text-align: right;
+  font-size: 12px;
+  padding: 1rem;
+  background-color: $na-dark-grey;
+  color: $na-white;
+
+  .footer-spacer {
+    @include media-up(xs) {
+      min-width: 25%;
+    }
+  }
+
+  .footer-noteaffect {
+    height: 1.5rem;
+  }
+
+  .footer-privacy {
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+  .footer-copy {
+    @include media-up(xs) {
+      min-width: 25%;
+    }
+  }
+}

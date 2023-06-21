@@ -1,0 +1,8 @@
+.department-rename-modal-button {
+  .department-rename-button {
+    @extend .na-btn-reset-width;
+    @extend .na-icon-btn-square;
+    position: relative;
+    top: -5px;
+  }
+}

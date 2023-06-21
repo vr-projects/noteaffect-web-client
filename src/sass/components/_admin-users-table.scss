@@ -1,0 +1,65 @@
+.admin-users-table {
+  // height: 75rem;
+  table {
+    width: 100%;
+    table-layout: auto;
+    margin-bottom: 4rem;
+    border-radius: 8px;
+    overflow: hidden;
+
+    thead {
+      th {
+        padding: 10px;
+        background-color: $na-alabaster;
+      }
+    }
+
+    tbody {
+      background: $na-white;
+      tr.admin-user-item {
+        border-bottom: 1px solid $na-light-grey;
+        @include multitype-transition(
+          (background-color, border, border-color, color)
+        );
+
+        &:hover {
+          border-color: $na-grey;
+        }
+        td.item-cell {
+          padding: 8px 16px;
+
+          .name {
+            font-weight: bold;
+            margin: 8px 0 12px;
+          }
+          .email,
+          .department {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+          }
+          .icon {
+            vertical-align: middle;
+            color: $na-grey;
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+.edit-user-departments-modal {
+  .name {
+    font-weight: bold;
+    margin-top: 4px;
+  }
+  .department {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid $na-hr-grey;
+  }
+  .icon {
+    vertical-align: middle;
+    color: $na-grey;
+    margin-right: 8px;
+  }
+}

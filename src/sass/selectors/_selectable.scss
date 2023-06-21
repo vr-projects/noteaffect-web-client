@@ -1,0 +1,14 @@
+%selectable {
+  @include multitype-transition((translate, -webkit-transform, color));
+  @include transform(0px, 0px);
+  user-select: none;
+  &:hover {
+    color: $na-hover;
+    @include transform(0px, -2px);
+  }
+  &:active {
+    // background-color: #f5f5f5;
+    @include transform(0px, 2px);
+  }
+  cursor: pointer;
+}

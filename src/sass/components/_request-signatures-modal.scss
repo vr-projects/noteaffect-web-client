@@ -1,0 +1,41 @@
+.request-signatures-modal {
+  .sign-by-date {
+    position: relative;
+
+    .input-clear-button {
+      position: absolute;
+      right: 0;
+      bottom: 5px;
+      min-width: unset;
+      border: none;
+      box-shadow: none;
+      background: none;
+    }
+  }
+  .signature-request-status {
+    list-style: none;
+    margin: 0 0 16px;
+    padding: 0;
+
+    li {
+      margin-bottom: 8px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid $na-hr-grey;
+      display: flex;
+      justify-content: space-between;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .icon {
+      margin-right: 8px;
+      color: $na-hr-grey;
+
+      &.signed {
+        color: $na-quadrary;
+      }
+    }
+  }
+}

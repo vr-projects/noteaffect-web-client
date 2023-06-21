@@ -1,0 +1,82 @@
+$na-primary: #123456;
+$na-primary-light: #689fd6;
+$na-secondary: #ff9000;
+$na-secondary-light: lighten($na-secondary, 40%);
+$na-tertiary: #c40a0a;
+$na-tertiary-light: #fdcded;
+$na-quadrary: #06a77d;
+$na-quadrary-light: #1cf7be;
+$na-hover: #960533;
+
+$na-success: $na-quadrary;
+$na-info: $na-primary-light;
+$na-warning: $na-secondary;
+$na-danger: $na-tertiary;
+
+$na-primary-900: darken($na-primary, 10%);
+$na-primary-700: darken($na-primary, 5%);
+$na-primary-500: $na-primary;
+$na-primary-300: lighten($na-primary, 10%);
+$na-primary-100: lighten($na-primary, 25%);
+
+$na-primary-light-900: darken($na-primary-light, 10%);
+$na-primary-light-700: darken($na-primary-light, 5%);
+$na-primary-light-500: $na-primary-light;
+$na-primary-light-300: lighten($na-primary-light, 10%);
+$na-primary-light-100: lighten($na-primary-light, 25%);
+
+$na-secondary-900: darken($na-secondary, 25%);
+$na-secondary-700: darken($na-secondary, 10%);
+$na-secondary-500: $na-secondary;
+$na-secondary-300: lighten($na-secondary, 10%);
+$na-secondary-100: lighten($na-secondary, 20%);
+
+$na-tertiary-900: darken($na-tertiary, 10%);
+$na-tertiary-700: darken($na-tertiary, 5%);
+$na-tertiary-500: $na-tertiary;
+$na-tertiary-300: lighten($na-tertiary, 10%);
+$na-tertiary-100: lighten($na-tertiary, 25%);
+
+$na-tertiary-light-900: darken($na-tertiary-light, 10%);
+$na-tertiary-light-700: darken($na-tertiary-light, 5%);
+$na-tertiary-light-500: $na-tertiary-light;
+$na-tertiary-light-300: lighten($na-tertiary-light, 5%);
+$na-tertiary-light-100: lighten($na-tertiary-light, 10%);
+
+$na-quadrary-900: darken($na-quadrary, 10%);
+$na-quadrary-700: darken($na-quadrary, 5%);
+$na-quadrary-500: $na-quadrary;
+$na-quadrary-300: lighten($na-quadrary, 10%);
+$na-quadrary-100: lighten($na-quadrary, 25%);
+
+$na-quadrary-light-900: darken($na-quadrary-light, 10%);
+$na-quadrary-light-700: darken($na-quadrary-light, 5%);
+$na-quadrary-light-500: $na-quadrary-light;
+$na-quadrary-light-300: lighten($na-quadrary-light, 5%);
+$na-quadrary-light-100: lighten($na-quadrary-light, 10%);
+
+$na-white: #fff;
+$na-light-grey: #f3f3f4;
+$na-hr-grey: #ddd;
+$na-alto-grey: #dedede;
+$na-grey: #aaa;
+$na-beastly-grey: #666;
+$na-medium-grey: #999;
+$na-dark-grey: #333;
+$na-black: #000;
+
+// name-that-color for off color names
+$na-wild-sand: #f5f5f5;
+$na-alabaster: #fafafa;
+$na-gallery: #f0f0f0;
+$na-link-blue: #0670a7;
+$na-link-water: #ccdff1;
+$na-heather-grey: #b7c1cc;
+$na-regent-grey: #8e9dab;
+
+$na-safari-audio-background: #878787;
+$na-chrome-audio-background: #f2f2f2;
+
+$na-control-item: $na-gallery;
+$na-control-item-selected: #caeeff;
+$na-control-item-hover: darken(#caeeff, 10%);

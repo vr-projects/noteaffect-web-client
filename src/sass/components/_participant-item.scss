@@ -1,0 +1,22 @@
+.participant-item,
+.observer-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  border-bottom: 1px solid $na-light-grey;
+
+  .participant-item-meta,
+  .observer-item-meta {
+    .participant-name,
+    .observer-name {
+      margin-right: 16px;
+    }
+  }
+
+  .participant-item-details-btn,
+  .observer-item-details-btn {
+    flex-shrink: 0;
+    margin-left: 1rem;
+  }
+}

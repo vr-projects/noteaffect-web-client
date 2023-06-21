@@ -1,0 +1,43 @@
+// Classes for react-transition-group npm package https://reactcommunity.org/react-transition-group/switch-transition
+$fade-timing: 500ms;
+$slide-up-timing: 200ms;
+
+.rtg-fade-enter {
+  opacity: 0;
+}
+.rtg-fade-exit {
+  opacity: 1;
+}
+.rtg-fade-enter-active {
+  opacity: 1;
+}
+.rtg-fade-exit-active {
+  opacity: 0;
+}
+.rtg-fade-enter-active,
+.rtg-fade-exit-active {
+  transition: opacity $fade-timing;
+}
+
+.rtg-slide-up-enter {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+.rtg-slide-up-enter-done {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.rtg-slide-up-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity $slide-up-timing, transform $slide-up-timing;
+}
+.rtg-slide-up-exit-active {
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity $slide-up-timing, transform $slide-up-timing;
+}
+.rtg-slide-up-exit-done {
+  opacity: 0;
+  transform: translateY(-100%);
+}

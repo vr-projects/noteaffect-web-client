@@ -1,0 +1,45 @@
+%list-item {
+  padding: 10px 10px 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+.list-unstyled {
+  padding-left: 0px;
+}
+.list-item-unstyled {
+  list-style-type: none;
+}
+
+.list-menu-item,
+.list-item {
+  @extend %list-item;
+  @extend %selectable;
+
+  .list-menu-title,
+  .title {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .no-title {
+    margin: 0;
+  }
+
+  .sub-title {
+    font-size: 9pt;
+    opacity: 0.6;
+    margin: 5px 0 0 0;
+  }
+
+  .label-item {
+    opacity: 0.4;
+    font-weight: normal;
+    font-size: 9pt;
+    display: inline-block;
+    padding: 0 7px;
+  }
+}

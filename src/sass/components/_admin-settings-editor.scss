@@ -1,0 +1,17 @@
+.admin-settings-editor {
+  table {
+    table-layout: fixed;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+
+    td,
+    th {
+      padding: 5px;
+    }
+
+    tr {
+      border-bottom: 1px solid #fafafa;
+    }
+  }
+}

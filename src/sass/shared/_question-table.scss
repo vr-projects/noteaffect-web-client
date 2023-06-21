@@ -1,0 +1,182 @@
+.instructor-student-questions,
+.student-questions {
+  table-layout: fixed;
+  width: 100%;
+
+  th {
+    font-weight: bold;
+  }
+
+  .votes-header {
+    width: 20%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .questions-header {
+    width: 80%;
+  }
+
+  .votes-header {
+    width: 64px;
+  }
+
+  .questions-header {
+    width: auto;
+  }
+
+  &.large {
+    .votes-header {
+      width: 64px;
+    }
+
+    .questions-header {
+      width: auto;
+    }
+
+    .student-question {
+      .question {
+        padding: 16px;
+      }
+    }
+
+    td,
+    th {
+      padding: 16px;
+
+      &.votes-header {
+        padding: 0;
+        text-align: center;
+      }
+    }
+  }
+
+  .student-question {
+    border-bottom: 1px solid $na-alabaster;
+    @include multitype-transition(background-color);
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+
+    &.instructor {
+      .question {
+        .rel > a {
+          font-size: 14px;
+          font-weight: bold;
+          cursor: pointer;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .title {
+      font-weight: bold;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sub-title {
+      font-size: 12px;
+      color: $na-beastly-grey;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .answer {
+      margin: 4px 0 4px 4px;
+      padding: 4px 4px 4px 8px;
+      font-size: 16px;
+      background-color: $na-alabaster;
+
+      .sub-title {
+        margin-top: 4px;
+      }
+    }
+    .no-answer {
+      margin: 4px 0 4px 4px;
+      padding: 4px 4px 4px 8px;
+      font-size: 16px;
+      background-color: $na-alabaster;
+
+      .sub-title {
+        margin-top: 4px;
+      }
+    }
+
+    .votes {
+      width: 10%;
+      font-size: 16px;
+      text-align: center;
+      padding: 4px;
+      font-weight: bold;
+    }
+
+    .question {
+      width: 80%;
+      font-size: 16px;
+      padding: 4px;
+    }
+
+    .vote {
+      width: 20%;
+      padding: 4px;
+
+      div {
+        &:hover {
+          background-color: $na-wild-sand;
+        }
+
+        user-select: none;
+        font-weight: bold;
+        padding: 4px;
+        cursor: pointer;
+
+        a {
+          text-decoration: none;
+
+          &.voted {
+            color: $na-secondary;
+          }
+
+          &.created {
+            color: $na-gallery;
+          }
+        }
+
+        background-color: $na-alabaster;
+      }
+
+      &.no-select {
+        div {
+          text-align: center;
+
+          background-color: transparent;
+
+          &:hover {
+            background-color: transparent;
+          }
+
+          cursor: initial;
+        }
+      }
+    }
+  }
+}
+
+.instructor-student-questions {
+  .answer {
+    border-left: 2px solid $na-secondary;
+  }
+  .no-answer {
+    border-left: 2px solid $na-success;
+  }
+}
+.student-questions {
+  .answer {
+    border-left: 2px solid $na-success;
+  }
+  .no-answer {
+    border-left: 2px solid $na-secondary;
+  }
+}
